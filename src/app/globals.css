@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,11 +23,44 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+  overflow: hidden;
+}
+
+/* Hide scrollbar buttons in WebKit browsers */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Customizing the rest of the scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem; /* Adjust width for vertical scrollbars */
+  height: 0.75rem; /* Adjust height for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #252525; /* Light grey track */
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #727272; /* Dark grey thumb */
+  border-radius: 10px; /* Optional: roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+.radial-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.75) 90%);
+  pointer-events: none;
 }
 
 @layer utilities {

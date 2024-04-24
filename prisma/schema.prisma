@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Models
+model Recipe {
+  id             String       @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  servings       Int
+  difficulty     String
+  totalTime      String
+  ingredient_ids String[]     @db.ObjectId
+  ingredients    Ingredient[]
+  categories     Category[]
+  tage           Tag[]
+  instructions   String[]
+  images         Image[]
+}
+
+model Ingredient {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  amount   String
+  unit     Unit
+  Recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId String @db.ObjectId
+}
+
+model Category {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  Recipe   Recipe? @relation(fields: [recipeId], references: [id])
+  recipeId String? @db.ObjectId
+}
+
+model Tag {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  Recipe   Recipe? @relation(fields: [recipeId], references: [id])
+  recipeId String? @db.ObjectId
+}
+
+model Image {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  url      String
+  Recipe   Recipe? @relation(fields: [recipeId], references: [id])
+  recipeId String? @db.ObjectId
+}
+
+// ENUMS
+enum Unit {
+  GRAM
+  KILOGRAM
+  MILLILITER
+  LITER
+  MILLIMETER
+  CENTIMETER
+  METER
+}
