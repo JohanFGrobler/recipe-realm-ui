@@ -52,7 +52,7 @@ export default function Landing() {
           </h2>
 
           {/* DESCRIPTION */}
-          <h3 className={'md:text-xl text-lg text-center max-w-3xl'}>
+          <h3 className={'md:text-xl text-lg text-center max-w-3xl font-ptsans'}>
             Welcome to the ultimate destination for food lovers. Dive into a
             world of flavor, creativity, and inspiration with our recipe app.
           </h3>

@@ -8,25 +8,19 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #f1f1f1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #eaefe8;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  ) rgb(var(--background-start-rgb));
+  background: var(--background);
   overflow: hidden;
 }
 
@@ -37,7 +31,7 @@ body {
 
 /* Customizing the rest of the scrollbar */
 ::-webkit-scrollbar {
-  width: 0.75rem; /* Adjust width for vertical scrollbars */
+  width: 0; /* Adjust width for vertical scrollbars */
   height: 0.75rem; /* Adjust height for horizontal scrollbars */
 }
 

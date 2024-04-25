@@ -6,9 +6,9 @@ export default function useResponsiveColumnCount() {
   useEffect(() => {
     function handleResize() {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 640) { // Tailwind's 'sm' breakpoint
+      if (screenWidth < 768) {
         setColumnCount(1);
-      } else if (screenWidth >= 640 && screenWidth < 1024) { // Tailwind's 'md' breakpoint
+      } else if (screenWidth >= 768 && screenWidth < 1280) {
         setColumnCount(3);
       } else {
         setColumnCount(5);
