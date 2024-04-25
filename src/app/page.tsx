@@ -60,8 +60,8 @@ export default function Landing() {
 
         {/*BUTTONS*/}
         <div className={'flex flex-col gap-3'}>
-          <ButtonNav label={'Sign In'} href={'/api/auth/login'} filled/>
-          <ButtonNav label={'Sign Up'} href={'/api/auth/register'}/>
+          <ButtonNav label={'Sign In'} filled/>
+          <ButtonNav label={'Sign Up'}/>
         </div>
       </Container>
     </main>

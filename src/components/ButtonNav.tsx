@@ -9,7 +9,7 @@ type ButtonNavProps = {
   className?: string;
   filled?: boolean;
   label: string;
-  href: string;
+  href?: string;
 }
 
 export default function ButtonNav({className, filled, label, href}: ButtonNavProps) {
