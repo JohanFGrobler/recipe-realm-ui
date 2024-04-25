@@ -18,7 +18,7 @@ export default function VirtualGrid() {
   const columnCount = useResponsiveColumnCount();
 
   // Constants
-  const itemCount = 1000;
+  const itemCount = 10;
   const rowCount = Math.ceil(itemCount / columnCount); // Dynamic row count based on column count
   const itemHeight = 475;
   const itemWidth = Math.floor(width / columnCount);
