@@ -25,8 +25,9 @@ export default function VirtualGrid() {
 
   const data = Array.from({ length: itemCount }, (_, index) => `Item ${Math.floor(index / columnCount)}, ${index % columnCount}`);
 
+
   return (
-    <div ref={gridRef} className="w-full h-full overflow-x-hidden flex justify-center">
+    <div ref={gridRef} className="h-[100svh] w-[100svw] sm:h-screen sm:w-screen overflow-x-hidden flex justify-center">
       <Grid
         className="scrollbar-hide"
         height={height - (5 * 16)} // Adjust height as necessary
