@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${inter.className} overflow-hidden`}>
+    <body className={inter.className}>
     <HeaderBar/>
     <div className={'overflow-hidden'}>
       {children}

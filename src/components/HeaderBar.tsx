@@ -32,7 +32,6 @@ export default function HeaderBar() {
           autoComplete="off"
           enterKeyHint="search"
           type="search"
-          value={''}
           placeholder="Search"
           className="w-full h-10 px-4 py-2 text-gray-700 bg-white border outline-none border-gray-300 rounded-full focus:ring-primary focus:border-primary shadow-sm placeholder-gray-400"
         />
