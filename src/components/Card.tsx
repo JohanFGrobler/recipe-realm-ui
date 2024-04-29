@@ -6,7 +6,6 @@ import Container from '@/components/Container';
 
 // Icons
 import {IoTimerOutline, IoPersonCircleOutline} from 'react-icons/io5';
-import {useEffect} from 'react';
 
 // Types
 type CardProps = {
@@ -14,20 +13,25 @@ type CardProps = {
 }
 
 export default function Card({data}: CardProps) {
-  // Effects
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   return (
     <Container
       animateHover
-      className={'cursor-pointer absolute inset-0 grid grid-cols-1 grid-rows-4 xl:m-6 m-4 b bg-card rounded-xl shadow-md hover:shadow-xl max-w-5xl'}
+      className={`
+      group 
+      cursor-pointer 
+      absolute inset-0 
+      grid grid-cols-1 grid-rows-4 
+      xl:m-6 m-4 
+      max-w-5xl
+      bg-card
+      rounded-xl
+      shadow-md hover:shadow-xl
+`}
     >
       {/*IMAGE*/}
       <div className={'relative h-0 w-full pt-80 row-span-3'}>
         <Image
-          src={'/food.webp'}
+          src={'/food.webp'} /*TODO: update with url*/
           alt={'Picture of food'}
           layout={'fill'}
           className={'object-cover rounded-t-xl'}
@@ -36,7 +40,8 @@ export default function Card({data}: CardProps) {
 
       <div className={'grid grid-cols-3 grid-rows-2 h-full row-start-4 p-2'}>
         {/*TITLE*/}
-        <h3 className={'mt-1 font-bold font-indieFlower text-4xl col-span-3 row-start-1 text-center text-zinc-800'}>
+        <h3
+          className={'group-hover:text-primary mt-1 font-bold font-indieFlower text-4xl col-span-3 row-start-1 text-center text-zinc-800'}>
           {data.name}
         </h3>
 

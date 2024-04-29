@@ -53,8 +53,10 @@ export default function VirtualGrid() {
 
 
   return (
-    <div ref={gridRef}
-         className={'h-[100svh] w-[100svw] sm:h-screen sm:w-screen overflow-x-hidden flex justify-center'}>
+    <div
+      ref={gridRef}
+      className={'h-[100svh] w-[100svw] sm:h-screen sm:w-screen overflow-x-hidden flex justify-center'}
+    >
       <Grid
         className={'scrollbar-hide'}
         height={height - (5 * 16)} // Gets rid of height from header
