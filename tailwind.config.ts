@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'custom': '0px 0px 1px 2px white', // Customize the RGBA as needed
+      },
       overflow: {
         'overflow-hidden-important': 'overflow-hidden !important'
       },

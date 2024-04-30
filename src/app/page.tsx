@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 // Framer
 import {motion, useAnimation} from 'framer-motion';
-import Container from '@/components/Container';
-import ButtonNav from '@/components/ButtonNav';
+import Container from '@/components/container';
+import ButtonNav from '@/components/buttonNav';
 
 export default function Landing() {
   // Hooks
@@ -18,7 +18,9 @@ export default function Landing() {
   }, [controls]);
 
   return (
-    <main className={'relative overflow-hidden h-[100svh] w-[100svw] sm:h-screen sm:w-screen select-none'}>
+    <main
+      className={'relative overflow-hidden h-[100svh] w-[100svw] sm:h-screen sm:w-screen select-none'}
+    >
       {/* BACKGROUND IMAGE */}
       <div className={'relative w-full h-full radial-vignette'}>
         <Image
@@ -44,7 +46,8 @@ export default function Landing() {
 
       {/* SIGN IN CONTAINER */}
       <Container
-        className={'absolute right-0 md:mr-10 mr-0 md:top-1/2 bottom-0 transform md:-translate-y-1/2 -translate-y-full md:bg-opacity-50 bg-opacity-70 bg-zinc-900 lg:w-1/3 md:w-1/2 w-full h-fit md:rounded-xl p-4 flex flex-col gap-10 space-y-4 z-10'}>
+        className={'absolute right-0 md:mr-10 mr-0 md:top-1/2 bottom-0 transform md:-translate-y-1/2 -translate-y-full md:bg-opacity-50 bg-opacity-70 bg-zinc-900 lg:w-1/3 md:w-1/2 w-full h-fit md:rounded-xl p-4 flex flex-col gap-10 space-y-4 z-10'}
+      >
         {/* HEADER */}
         <div className={'flex flex-col gap-10 w-full justify-center items-center'}>
           <h2 className={'md:text-5xl mt-5 text-3xl font-bold font-indieFlower md:leading-tight text-center max-w-4xl'}>

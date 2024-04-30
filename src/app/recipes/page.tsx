@@ -1,5 +1,7 @@
 'use client';
-import VirtualGrid from '@/components/Grid';
+
+// Components
+import VirtualGrid from '@/components/grid';
 
 export default function Recipes() {
   return (

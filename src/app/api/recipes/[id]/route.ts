@@ -7,14 +7,14 @@ export const GET = (id: string): Promise<Recipe | null> => {
 };
 
 export const POST = (data: Recipe) => {
-  return prisma.recipe.createMany({data});
+  return prisma.recipe.create({data});
 };
 
 export const PATCH = (filter: any, data: Recipe) => {
-  return prisma.recipe.updateMany({where: filter, data});
+  return prisma.recipe.update({where: filter, data});
 };
 
 export const DELETE = (filter: any) => {
-  return prisma.recipe.deleteMany({where: filter});
+  return prisma.recipe.delete({where: filter});
 };
 

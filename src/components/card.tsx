@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 // Components
-import Container from '@/components/Container';
+import Container from '@/components/container';
 
 // Icons
 import {IoTimerOutline, IoPersonCircleOutline} from 'react-icons/io5';
